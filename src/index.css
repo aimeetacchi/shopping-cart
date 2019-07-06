@@ -1,0 +1,162 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.toolbar {
+  height: 40px;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar h1 {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.icon-button {
+  transition: all 100ms ease-out;
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+
+.icon-button:hover {
+  background-color: rgba(40, 40, 40, 0.12);
+}
+
+.popover-wrapper {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.popover-container {
+  position: relative;
+  margin: auto;
+  width: 0;
+  height: 0;
+}
+
+.popover-container::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: -7px;
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ebebeb;
+}
+
+.popover {
+  position: absolute;
+  border-radius: 3px;
+  width: 300px;
+  top: 9px;
+  padding: 10px;
+  background-color: #ebebeb;
+}
+
+.popover.left {
+  right: -18px;
+}
+.popover.right {
+  left: -18px;
+}
+
+.cart-item-list {
+  margin: 0;
+  list-style: none;
+  margin-right: -10px;
+  padding: 0;
+}
+
+.cart-item-info {
+  display: flex;
+  margin-left: -40px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  padding-right: 10px;
+}
+
+.cart-item:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cart-item-info-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #ccc;
+}
+
+.cart-item-info-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.cart-item-info-name {
+  font-weight: bold;
+}
+
+.cart-item-quantity-counter {
+  display: flex;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+}
+
+.counter-btn {
+  height: 15px;
+  width: 21px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #ccc;
+}
+.counter-increment {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.counter-decrement {
+  border-top: 1px solid #f1f1f1;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.numeric-display {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5px;
+}
